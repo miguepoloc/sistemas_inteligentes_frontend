@@ -4,13 +4,29 @@ import { Table, TableBody, TableCell, TableColumn, TableHeader, TableRow } from 
 import { useEffect, useState } from "react";
 import { title } from "@/components/primitives";
 
+// Define la interfaz para los datos de las filas
+interface DataRow {
+    id: number;
+    created_at: string;
+    updated_at: string;
+    is_active: boolean;
+    date_time: string;
+    temperature: string;
+    humidity: string;
+    pressure: string;
+    altitude: string;
+    node: number;
+}
+
 const NodesPage = () => {
-    const [data, setData] = useState([]);
+    // Agrega la anotación de tipo para data
+    const [data, setData] = useState<DataRow[]>([]);
 
     useEffect(() => {
         const fetchData = async () => {
             try {
                 const res = await fetch(process.env.NEXT_PUBLIC_BACKEND_URL + "nodes/storage/");
+                console.log(process.env.NEXT_PUBLIC_BACKEND_URL + "nodes/storage/");
                 const data = await res.json();
                 setData(data);
             } catch (error) {
