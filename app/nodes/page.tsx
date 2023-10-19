@@ -40,8 +40,8 @@ const NodesPage = () => {
     return (
         <div>
             <h1 className={title()}>Nodos</h1>
-            <br />
-            <Table isStriped aria-label="Example static collection table">
+            <br/>
+            <Table isStriped aria-label="Example static collection table" className="mt-7">
                 <TableHeader>
                     <TableColumn>Id</TableColumn>
                     <TableColumn>Created At</TableColumn>
