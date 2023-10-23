@@ -14,6 +14,10 @@ export const siteConfig = {
             href: "/nodes",
         },
         {
+            label: "Visitantes",
+            href: "/visitor",
+        },
+        {
             label: "Docs",
             href: "/docs",
         },
