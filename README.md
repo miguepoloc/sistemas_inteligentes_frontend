@@ -4,16 +4,27 @@ This is a template for creating applications using Next.js 13 (app directory) an
 
 ## Technologies Used
 
-- [Next.js 13](https://nextjs.org/docs/getting-started)
-- [NextUI v2](https://nextui.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Tailwind Variants](https://tailwind-variants.org)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Framer Motion](https://www.framer.com/motion/)
-- [next-themes](https://github.com/pacocoursey/next-themes)
+-   [Next.js 13](https://nextjs.org/docs/getting-started)
+-   [NextUI v2](https://nextui.org/)
+-   [Tailwind CSS](https://tailwindcss.com/)
+-   [Tailwind Variants](https://tailwind-variants.org)
+-   [TypeScript](https://www.typescriptlang.org/)
+-   [Framer Motion](https://www.framer.com/motion/)
+-   [next-themes](https://github.com/pacocoursey/next-themes)
 
 ## How to Use
 
+To create the docker image, run the following command:
+
+```bash
+sudo docker build . -t sistemas-inteligentes-frontend
+```
+
+To run the docker image, run the following command:
+
+```bash
+sudo docker run -p 3000:3000 sistemas-inteligentes-frontend
+```
 
 ### Use the template with create-next-app
 
