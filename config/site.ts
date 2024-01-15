@@ -3,7 +3,7 @@ export type SiteConfig = typeof siteConfig;
 export const siteConfig = {
     name: "GIDEAM",
     description:
-        "Make beautiful websites regardless of your design experience.",
+        "Identificación de enfermedades en plantas mediante el uso de sistemas inteligentes",
     navItems: [
         {
             label: "Inicio",
@@ -18,61 +18,33 @@ export const siteConfig = {
             href: "/visitor",
         },
         {
-            label: "Docs",
+            label: "Documentación",
             href: "/docs",
-        },
-        {
-            label: "Pricing",
-            href: "/pricing",
-        },
-        {
-            label: "Blog",
-            href: "/blog",
-        },
-        {
-            label: "About",
-            href: "/about",
         },
     ],
     navMenuItems: [
         {
-            label: "Profile",
-            href: "/profile",
+            label: "Inicio",
+            href: "/",
         },
         {
-            label: "Dashboard",
-            href: "/dashboard",
+            label: "Nodos",
+            href: "/nodes",
         },
         {
-            label: "Projects",
-            href: "/projects",
+            label: "Visitantes",
+            href: "/visitor",
         },
         {
-            label: "Team",
-            href: "/team",
-        },
-        {
-            label: "Calendar",
-            href: "/calendar",
-        },
-        {
-            label: "Settings",
-            href: "/settings",
-        },
-        {
-            label: "Help & Feedback",
-            href: "/help-feedback",
-        },
-        {
-            label: "Logout",
-            href: "/logout",
+            label: "Documentación",
+            href: "/docs",
         },
     ],
     links: {
-        github: "https://github.com/nextui-org/nextui",
-        twitter: "https://twitter.com/getnextui",
-        docs: "https://nextui.org",
-        discord: "https://discord.gg/9b6yyZKmH4",
-        sponsor: "https://patreon.com/jrgarciadev",
+        backend: "https://github.com/miguepoloc/sistemas_inteligentes_backend",
+        frontend:
+            "https://github.com/miguepoloc/sistemas_inteligentes_frontend",
+        sistema_crecimiento:
+            "https://github.com/miguepoloc/sistema_crecimiento",
     },
 };

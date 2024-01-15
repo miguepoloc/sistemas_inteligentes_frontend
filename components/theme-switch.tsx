@@ -25,17 +25,14 @@ export const ThemeSwitch: FC<ThemeSwitchProps> = ({
         theme === "light" ? setTheme("dark") : setTheme("light");
     };
 
-    const {
-        slots,
-        isSelected,
-        getBaseProps,
-        getInputProps,
-        getWrapperProps,
-    } = useSwitch({
-        isSelected: theme === "light",
-        "aria-label": `Switch to ${theme === "light" ? "dark" : "light"} mode`,
-        onChange,
-    });
+    const { slots, isSelected, getBaseProps, getInputProps, getWrapperProps } =
+        useSwitch({
+            isSelected: theme === "light",
+            "aria-label": `Switch to ${
+                theme === "light" ? "dark" : "light"
+            } mode`,
+            onChange,
+        });
 
     return (
         <button

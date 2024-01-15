@@ -1,32 +1,29 @@
 "use client";
 
-import { Table, TableBody, TableCell, TableColumn, TableHeader, TableRow } from "@nextui-org/table";
+import {
+    Table,
+    TableBody,
+    TableCell,
+    TableColumn,
+    TableHeader,
+    TableRow,
+} from "@nextui-org/table";
 import { useEffect, useState } from "react";
 import { title } from "@/components/primitives";
-
-// Define la interfaz para los datos de las filas
-interface DataRow {
-    id: number;
-    created_at: string;
-    updated_at: string;
-    is_active: boolean;
-    date_time: string;
-    temperature: string;
-    humidity: string;
-    pressure: string;
-    altitude: string;
-    node: number;
-}
+import { DataRow } from "./nodes.types";
 
 const NodesPage = () => {
-    // Agrega la anotación de tipo para data
     const [data, setData] = useState<DataRow[]>([]);
 
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const res = await fetch(process.env.NEXT_PUBLIC_BACKEND_URL + "nodes/storage/");
-                console.log(process.env.NEXT_PUBLIC_BACKEND_URL + "nodes/storage/");
+                const res = await fetch(
+                    process.env.NEXT_PUBLIC_BACKEND_URL + "nodes/storage/"
+                );
+                console.log(
+                    process.env.NEXT_PUBLIC_BACKEND_URL + "nodes/storage/"
+                );
                 const data = await res.json();
                 setData(data);
             } catch (error) {
@@ -40,8 +37,12 @@ const NodesPage = () => {
     return (
         <div>
             <h1 className={title()}>Nodos</h1>
-            <br/>
-            <Table isStriped aria-label="Example static collection table" className="mt-7">
+            <br />
+            <Table
+                isStriped
+                aria-label="Example static collection table"
+                className="mt-7"
+            >
                 <TableHeader>
                     <TableColumn>Id</TableColumn>
                     <TableColumn>Created At</TableColumn>
